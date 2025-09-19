@@ -19,10 +19,15 @@ __________________________________
 ## 📂 Deliverables
 
 **✔ Database creation and initial schema setup**
+
 **✔ ETL scripts for Bronze → Silver → Gold transitions**
+
 **✔ Data validation checks** *(duplicates, NULLs, inconsistent values)*
+
 **✔ Business queries on the Gold Layer for HR, Salary, Projects, KPIs**
+
 **✔ Advanced SQL using JOINs, Window Functions, GROUP BY, HAVING, COALESCE, UNION**
+
 **✔ ERD for the Gold Layer** *(Star Schema)*
 ______________________________
 
