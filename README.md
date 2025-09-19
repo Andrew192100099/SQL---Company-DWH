@@ -1,4 +1,4 @@
-# SQL__Company_DWH
+# SQL__Company__DWH
 End-to-end Data Warehouse project (MySQL): OLTP → Bronze → Silver → Gold, with ETL scripts, validation, and workforce analytics.
 
 ╔════════════════════════════════════════════════════════════════════╗
