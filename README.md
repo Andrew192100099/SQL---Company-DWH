@@ -1,9 +1,9 @@
 # SQL__Company__DWH
 End-to-end Data Warehouse project (MySQL): OLTP → Bronze → Silver → Gold, with ETL scripts, validation, and workforce analytics.
 
-╔════════════════════════════════════════════════════════════════════╗
-║                FINAL PROJECT — Company Workforce DWH        			 ║
-╚════════════════════════════════════════════════════════════════════╝
+╔══════════════════════════════════════════════════════════════════╗
+║                FINAL PROJECT — Company Workforce DWH        	   ║
+╚══════════════════════════════════════════════════════════════════╝
 
 Tagline: From raw OLTP chaos → to a structured, analytical-ready Data Mart.
 
