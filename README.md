@@ -2,7 +2,7 @@
 End-to-end Data Warehouse project (MySQL): OLTP → Bronze → Silver → Gold, with ETL scripts, validation, and workforce analytics.
 ____________
 
-**📌 Project Context**
+## 📌 Project Context
 
 This project was developed during the National Telecommunication Institute (NTI), Egypt — Data Analytics 
 It simulates real-world SQL practices used in companies to design and implement a **Data Warehouse (DWH)** for workforce and project management analytics.
