@@ -1,106 +1,61 @@
 # SQL__Company__DWH
 End-to-end Data Warehouse project (MySQL): OLTP → Bronze → Silver → Gold, with ETL scripts, validation, and workforce analytics.
+____________
 
-╔══════════════════════════════════════════════════════════════════╗
-║                FINAL PROJECT — Company Workforce DWH        	   ║
-╚══════════════════════════════════════════════════════════════════╝
+**📌 Project Context**
 
-Tagline: From raw OLTP chaos → to a structured, analytical-ready Data Mart.
+This project was developed during the National Telecommunication Institute (NTI), Egypt — Data Analytics 
+It simulates real-world SQL practices used in companies to design and implement a **Data Warehouse (DWH)** for workforce and project management analytics.
 
-────────────────────────────────────────────────────────────────────────
-OVERVIEW
-────────────────────────────────────────────────────────────────────────
-This project implements a full Data Warehouse pipeline for company workforce data.
-The goal is to clean, validate, and transform raw OLTP data into analytical-ready
-Gold Layer tables, enabling HR and management to answer workforce and project-related
-business questions.
+## 🏯The focus is on building a layered architecture:
 
-Dataset & Context: Company data (employees, departments, projects, works_on).  
-Layers used: Bronze → Silver → Gold (standard DWH architecture).  
+➢ **Bronze Layer →** Raw OLTP data ingestion ***(staging)***
 
-────────────────────────────────────────────────────────────────────────
-DELIVERABLES
-────────────────────────────────────────────────────────────────────────
-I.   project_creating_company_db   — Database creation script  
-II.  project_data                  — Sample dataset inserts  
-III. init_dwh                      — Initialize schemas (company_dwh)  
-IV.  load_bronze                   — Load raw data into staging tables  
-V.   ddl_silver                    — Create Silver layer tables  
-VI.  vali_checks_bronze            — Validation checks on Bronze layer  
-VII. load_silver                   — ETL into Silver layer  
-VIII. vali_checks_silver           — Validation checks on Silver layer  
-IX.  ddl_gold                      — Create Gold layer tables  
-X.   load_gold                     — ETL into Gold layer  
-XI.  que_gold                      — Business queries & reports  
+➢ **Silver Layer →** Data cleaning, validation, and normalization
 
-────────────────────────────────────────────────────────────────────────
-PROJECT LAYERS
-────────────────────────────────────────────────────────────────────────
-BRONZE — Raw ingestion (no cleaning, raw OLTP copied into stg_ tables).  
-SILVER — Cleaned & standardized (duplicates removed, invalid values fixed, FK validated).  
-GOLD   — Star Schema (fact + dimension tables for reporting, dashboards, KPIs).  
+➢ **Gold Layer →** Analytical-ready Star Schema ***(fact + dimensions)***
+__________________________________
 
-────────────────────────────────────────────────────────────────────────
-BUSINESS QUESTIONS ANSWERED
-────────────────────────────────────────────────────────────────────────
-1. Top 5 projects based on total hours worked.  
-2. Number of employees per project.  
-3. Participation rates across departments.  
+## 📂 Deliverables
 
-────────────────────────────────────────────────────────────────────────
-FINAL DELIVERABLES
-────────────────────────────────────────────────────────────────────────
-✔ Gold Layer ERD (Star Schema)  
-✔ Stored Procedures for ETL across layers  
-✔ Business Queries on Gold Layer  
-✔ Validation checks for data quality  
+**✔ Database creation and initial schema setup**
+**✔ ETL scripts for Bronze → Silver → Gold transitions**
+**✔ Data validation checks** *(duplicates, NULLs, inconsistent values)*
+**✔ Business queries on the Gold Layer for HR, Salary, Projects, KPIs**
+**✔ Advanced SQL using JOINs, Window Functions, GROUP BY, HAVING, COALESCE, UNION**
+**✔ ERD for the Gold Layer** *(Star Schema)*
+______________________________
 
-────────────────────────────────────────────────────────────────────────
-QUERY LIST
-────────────────────────────────────────────────────────────────────────
-1. Employees in Engineering (dno=10) sorted by salary  
-2. Top 5 most common employee addresses  
-3. Managers with names starting 'J' and containing 'e'  
-4. Employees without department OR supervisor  
-5. Departments and their managers (showing "No Manager" if null)  
-6. Employees earning 40K–60K not in HR/IT/Finance  
-7. Average salary by gender per department  
-8. Departments with >1 employee AND avg salary > 50K  
-9. Total work hours per project location (>30 hours)  
-10. Projects with department & manager details  
-11. Employees with/without projects (COALESCE "No Project")  
-12. Departments ↔ Projects (including no matches, using UNION)  
-13. Employees with projects vs. without projects  
-14. Employees earning more than ALL in Customer Service (dno=9)  
-15. Employees earning above their department average  
-17. Project workload % of department total hours  
-    • Standard GROUP BY solution  
-    • Alternative solution using Window Functions  
-18. Invalid assignments:  
-    • Employees in non-existent departments  
-    • Projects in non-existent departments  
-19. Department efficiency score = (Total Project Hours / Total Salaries) × 100  
+## 📊 Business Questions Answered
 
-────────────────────────────────────────────────────────────────────────
-HIGHLIGHTS
-────────────────────────────────────────────────────────────────────────
-• Use of **JOINs, GROUP BY, HAVING, COALESCE, UNION** for complex logic.  
-• Advanced **Window Functions (ROW_NUMBER, SUM OVER, PARTITION)** to simplify queries.  
-• Business-driven KPIs: efficiency scores, project % contributions, salary gaps.  
+**📍 Who are the top employees by salary in each department?**
 
-────────────────────────────────────────────────────────────────────────
-NOTES ON SQL COMPATIBILITY ⚠
-────────────────────────────────────────────────────────────────────────
-• These scripts are written in **MySQL** syntax.  
-• SQL dialects vary across database systems.  
-• If opened in Microsoft SQL Server (T-SQL) or Oracle, syntax errors will occur.  
-• For correct execution → **use MySQL Workbench / MySQL CLI**.  
+**📍 Which projects consume the most hours?**
 
-────────────────────────────────────────────────────────────────────────
-LICENSE & CREDITS
-────────────────────────────────────────────────────────────────────────
-Author: <Andrew Wageh>  
-Institute: National Telecommunication Institute (NTI), Egypt  
-Track: Data Analytics 
+**📍 How efficient is each department (project hours vs. salaries)?**
 
-════════════════════════════════════════════════════════════════════════
+**📍 Which employees are unassigned to projects or supervisors?**
+
+**📍 Salary distribution by gender and department.**
+
+**📍 Department–Project relationships, including gaps (no projects, no managers).**
+____________________
+
+## ⚠ Notes on SQL Compatibility
+
+All scripts and queries are written in **<ins>MySQL syntax</ins>**.
+
+**SQL dialects differ across platforms →** opening in *Microsoft SQL Server* **,** *PostgreSQL* **,** or *Oracle* **<ins>will produce syntax errors</ins>**.
+
+**✅ For correct execution,** use **<ins>MySQL Workbench </ins>**  or **<ins>MySQL CLI</ins>** *(tested on MySQL 8.0 CE)*.
+________________________
+
+## 🎯 Why This Project Matters
+
+*➢ Mimics real-world corporate SQL workflows for building analytical Data Warehouses.*
+
+*➢ Provides hands-on experience in data cleaning, ETL, and Star Schema modeling.*
+
+*➢ Bridges the gap between academic training and business-driven analytics.*
+
+*➢ A practical showcase of Data Analytics skills gained at NTI, Egypt.*
