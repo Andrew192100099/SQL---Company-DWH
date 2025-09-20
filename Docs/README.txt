@@ -103,9 +103,10 @@ Track: Data Analytics — Internship Task 10 (SQL Project)
 ────────────────────────────────────────────────────────────────────────
 CONTACT
 ────────────────────────────────────────────────────────────────────────
-Questions, suggestions or collaborations — 192100099@ecu.edu.eg **||** andrewwageh333@gmail.com
+Questions, suggestions or collaborations — 192100099@ecu.edu.eg || andrewwageh333@gmail.com
 
 ════════════════════════════════════════════════════════════════════════
+
 
 
 
