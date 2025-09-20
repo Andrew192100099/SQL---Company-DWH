@@ -1,5 +1,5 @@
 ╔════════════════════════════════════════════════════════════════════╗
-║                FINAL PROJECT — Company Workforce DWH   	         ║
+║                First PROJECT — Company Workforce DWH        					          ║
 ╚════════════════════════════════════════════════════════════════════╝
 
 Tagline: From raw OLTP chaos → to a structured, analytical-ready Data Mart.
@@ -98,7 +98,6 @@ LICENSE & CREDITS
 ────────────────────────────────────────────────────────────────────────
 Author: <Andrew Wageh>  
 Institute: National Telecommunication Institute (NTI), Egypt  
-Track: Data Analytics 
+Track: Data Analytics — Internship Task 10 (SQL Project)  
 
 ════════════════════════════════════════════════════════════════════════
-
